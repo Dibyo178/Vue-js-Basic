@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Vue js</title>
+  </head>
+  <div id="app">
+    <form @submit.prevent="handleSubmitForm">
+      <h3>Enter your name</h3>
+      <input type="text" @keyup.enter="handleKeyup" />
+
+      <!-- @keyup.enter="handleKeyup"  enter is a event modifier-->
+
+      <p>Welcome {{name}}</p>
+      <button type="submit">Ok</button>
+    </form>
+    <hr />
+    <br />
+    <div class="card" @click="cardClick">
+      <button @click.stop="handleViewClick">view</button>
+    </div>
+  </div>
+  <body>
+    <script src="app.js"></script>
+  </body>
+</html>

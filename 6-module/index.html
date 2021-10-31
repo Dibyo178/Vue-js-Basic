@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="vue.global.js"></script> -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Vue Js 4</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>Time & Date: {{ getCurrentTime()}}</h2>
+      <h3>Counter : {{count}}</h3>
+
+      <!-- process 1 -->
+
+      <!-- <button v-on:click="increase">Increment</button>
+      <button v-on:click="decrease">Decrement</button> -->
+
+      <!-- process 2 -->
+
+      <button @click="increase($event,1)">Increment 1</button>
+      <button @click="decrease(1)">Decrement 1</button>
+
+      <br />
+
+      <button @click="increase(2)">Increment 2</button>
+      <button @click="decrease(2)">Decrement 2</button>
+      <hr />
+
+      <button @click="test($event)">Test</button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
